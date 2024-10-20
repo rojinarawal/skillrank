@@ -23,7 +23,8 @@ const Login = () => {
       <div className='flex justify-center rounded-sm'>
         <form
           onSubmit={handleSubmit}
-          className='flex flex-col gap-6 bg-opacity-30 backdrop-blur-2xl rounded-lg px-10 py-8 mt-36 w-1/4 h-96 shadow-md text-white cursor-pointer'
+          className='flex flex-col gap-6 bg-opacity-30 backdrop-blur-2xl rounded-lg px-10 py-8 mt-36 lg:w-1/4 md:w-1/3 sm:w-2/5
+           h-96 shadow-md text-white cursor-pointer'
         >
           <h2 className='text-center font-bold text-3xl mb-4'>Login</h2>
           <div className='relative'>
