@@ -34,7 +34,7 @@ const Login = () => {
               name='username'
               value={loginData.username}
               onChange={handleChange}
-              className='block border border-customPurple bg-transparent rounded-full w-full px-3 py-2 text-sm focus:outline-none placeholder:text-white'
+              className='block border bg-transparent rounded-full w-full px-3 py-2 text-sm focus:outline-none placeholder:text-white'
             />
             <FaUser className='absolute top-3 right-5 h-4 w-3' />
           </div>
@@ -45,7 +45,7 @@ const Login = () => {
               name='password'
               value={loginData.password}
               onChange={handleChange}
-              className='block border border-customPurple bg-transparent rounded-full w-full px-3 py-2 text-sm focus:outline-none placeholder:text-white'
+              className='block border bg-transparent rounded-full w-full px-3 py-2 text-sm focus:outline-none placeholder:text-white'
             />
             <IoMdLock className='absolute top-3 right-4 h-4 w-5' />
           </div>
