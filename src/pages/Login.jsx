@@ -1,9 +1,14 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { FaUser } from 'react-icons/fa';
 import { IoMdLock } from 'react-icons/io';
+import { useNavigate } from 'react-router-dom';
+import UserContext from '../contexts/UserContext';
 
 const Login = () => {
   const [loginData, setLoginData] = useState({ username: '', password: '' });
+  const [errorMessage, setErrorMessage] = useState(''); // For any login errors
+  const navigate = useNavigate(); // intialization
+  const { setUser } = useContext(UserContext);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -12,7 +17,14 @@ const Login = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('Form Data Submitted:', loginData);
+
+    //Dummy login
+    if (loginData.username && loginData.password) {
+      setUser({ username: loginData.username }); //set the user context
+      navigate('/dashboard');
+    } else {
+      setErrorMessage('Invalid username and password');
+    }
   };
 
   return (

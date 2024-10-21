@@ -1,13 +1,15 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
+import Login from './pages/login';
+import Dashboard from './pages/Dashboard';
 
 const App = () => {
   return (
-    <div>
-      <Link to='/login' className='text-blue-500 hover:underline'>
-        Go to Login
-      </Link>
-    </div>
+    <>
+      <Routes>
+        <Route path='/' element={<Login />} />
+        <Route path='/dashboard' element={<Dashboard />} />
+      </Routes>
+    </>
   );
 };
 
